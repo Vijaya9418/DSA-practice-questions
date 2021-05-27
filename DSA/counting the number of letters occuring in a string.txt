@@ -1,0 +1,33 @@
+/*given a stirng  : aaaaabbccccvvvv
+u should encode and output it as 5a2b4c4v
+there are 5 a so we made it 5a then we have 2 b's so 2b then 3 c's so 3c
+aaaaaa output is 6a
+vijay output should be 1v1i1j1a1y */
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		Scanner sc=new Scanner(System.in);
+		String v=sc.nextLine();
+		int count=1;
+		char prev=v.charAt(0);
+		String b="";
+		for(int i=0; i<v.length(); i++)
+		{
+		    if(prev==v.charAt(i))
+		    {
+		        count++;
+		    }
+		    else{
+		       b +=count+ "" +prev;
+		       count=1;
+		       prev=v.charAt(i);
+		    }
+		}
+		 b +=count+ "" +prev;
+		System.out.println(b);
+		sc.close();
+	}
+}

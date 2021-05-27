@@ -1,0 +1,33 @@
+/*Input will be two srtings
+First spring have some words in second u have to count how many of this words belong
+ to 2st string and how many are not
+Example:Vijay Vijaya Rinku Singh
+VIJAY Vijay Rinku Srikanth Vijaya Rohith Virat
+Your output should be: 4 3*/
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		
+		
+		Scanner sc=new Scanner(System.in);
+	String[] arr1=sc.nextLine().split(" ");
+	String[] arr2=sc.nextLine().split(" ");
+		
+		int count=0;
+		for(int i=0; i<arr1.length; i++)
+		{
+		    for(int j=0; j<arr2.length; j++)
+		    {
+		        
+		        if(arr1[i].equals(arr2[j]))
+		        {
+		            count++;
+		        }
+		    }
+		}
+		System.out.println(count+" "+(arr1.length - count));
+	}
+	
+}
