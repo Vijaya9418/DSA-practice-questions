@@ -1,0 +1,32 @@
+/*Question is :
+u are given a array  like yersterday here u have to 
+output two digits that have the maximum difference.
+example array given is {3,5,2,10,20,70,62,92,5} your output should be 
+2 92*/
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		int[] arr={3,5,2,10,20,70,62,92,5};
+	
+	    int low=arr[0];
+	    int high=arr[0];
+	    
+	    for(int i=0; i<arr.length; i++)
+	    {
+	        if(arr[i]<low)
+	        {
+	            low=arr[i];
+	            
+	        }
+
+        if(arr[i]>high)
+        {
+            high=arr[i];
+            
+        }
+	    }
+	   System.out.println(low+" "+high);
+	}
+}
