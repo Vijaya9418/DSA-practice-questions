@@ -1,3 +1,7 @@
+/* palindrome means the reverse of any number should be same as original
+example 121 the reverse of 121 is same */
+
+
 import java.util.*;
 public class Main
 {
