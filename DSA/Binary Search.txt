@@ -1,0 +1,39 @@
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Scanner sc = new Scanner (System.in);
+    String s = sc.nextLine ();
+    String arr[] = s.split (" ");
+    int x = Integer.parseInt (sc.nextLine ());
+    System.out.print(search(arr,x));
+  }
+
+  public static int search (String arr[], int x)
+  {
+    int low = 0;
+    int high = arr.length - 1;
+    while (low <= high)
+      {
+	int mid = (low + high) / 2;
+	if (Integer.parseInt (arr[mid]) == x)
+	  {
+	    return mid;
+	  }
+	if (Integer.parseInt (arr[mid]) > x)
+	    {
+	    high = mid - 1;
+	        
+	    }
+	    else
+	    {
+	    low = mid + 1;
+	        
+	    }
+	    }
+  
+	    return -1;
+      
+  }
+	    }
